@@ -1,0 +1,42 @@
+Št.	Vpisna št	Priimek	Ime	Status	Način študija	Št.opr.	Sk.opr.	Vpis pred.	Ocena vaj	Opombe
+1	28191000  	Aaaaaaaaaaa	Aaaaaaa	 	redni	1	1	2019/20
+2	28191000  	Aaaaaaaaaa	Aaaa	 	redni	1	1	2019/20
+3	28191000  	Aaaaaaa	Aaaa	 	redni	1	1	2019/20
+4	28191000  	Aaaaaaaa	Aaaa	 	redni	1	1	2019/20
+5	28191000  	Aaaaaa	Aaaa	 	redni	1	1	2019/20
+6	28191000  	Aaaaaaaaa	Aaaa	 	redni	1	1	2019/20
+7	28191000  	Aaaaa aaaaa	Aaa	 	redni	1	1	2019/20
+8	28191000  	Aaaaaa	Aaaaaa	 	redni	1	1	2019/20
+9	28191000  	Aaaaaa	Aaaa aaaaa	 	redni	1	1	2019/20
+10	28191000  	Aaaaaa	Aaa	 	redni	1	1	2019/20
+11	28191000  	Aaaaa	Aaa	 	redni	1	1	2019/20
+12	28191000  	Aaaaaaaa aaaaaaaa	Aaa aaaaaaa	 	redni	1	1	2019/20
+13	28191000  	Aaaaaaa	Aaaaa	 	redni	1	1	2019/20
+14	28191000  	Aaaaaa	Aaaa	 	redni	1	1	2019/20
+15	28191000  	Aaaaaaa	Aaaa	 	redni	1	1	2019/20
+16	28191000  	Aaaaa	Aaaaa	 	redni	1	1	2019/20
+17	28191000  	Aaaaa	Aaaaa	 	redni	1	1	2019/20
+18	28191000  	Aaaaaa	Aaaaaa	 	redni	1	1	2019/20
+19	28191000  	Aaaaa	Aaa	 	redni	1	1	2019/20
+20	28191000  	Aaaaaaa	Aaaaaaaa	 	redni	1	1	2019/20
+21	28191000  	Aaaaaaa	Aaaaa	 	redni	1	1	2019/20
+22	28191000  	Aaaaaaaa	Aaa	 	redni	1	1	2019/20
+23	28191000  	Aaaaaa	Aaa	 	redni	1	1	2019/20
+24	28191000  	Aaaaaaaaa	Aaaa	 	redni	1	1	2019/20
+25	28191000  	Aaaaaa	Aaa	 	redni	1	1	2019/20
+26	28191000  	Aaaaa	Aaaa	 	redni	1	1	2019/20
+27	28191000  	Aaaaaaa	Aaaaa	 	redni	1	1	2019/20
+28	28191000  	Aaaaaaaa aaaaaa	Aaaaaaa aaaaaaa	 	redni	1	1	2019/20
+29	28191000  	Aaaaaaaa	Aaaaa	 	redni	1	1	2019/20
+30	28191000  	Aaaaa	Aaaa	 	redni	1	1	2019/20
+31	28191000  	Aaaaa	Aaaa	 	redni	1	1	2019/20
+32	28191000  	Aaaaaaa	Aaaaaa	 	redni	1	1	2019/20
+33	28191000  	Aaaaa	Aaaaa	 	redni	1	1	2019/20
+34	28191000  	Aaaaaaa	Aaaa	 	redni	1	1	2019/20
+35	28191000  	Aaaaaaa	Aaaa	 	redni	1	1	2019/20
+36	28191000  	Aaaaa	Aaaaaa	 	redni	1	1	2019/20
+37	28191000  	Aaaaaa	Aaaaa	 	redni	1	1	2019/20
+38	28191000  	Aaaaa	Aaa aaaa	 	redni	1	1	2019/20
+39	28191000  	Aaaaa	Aaaaaaa	 	redni	1	1	2019/20
+40	28191000  	Aaaaa	Aaaa	 	redni	1	1	2019/20
+41	28191000  	Aaaaaaa	Aaaa	 	redni	1	1	2019/20
