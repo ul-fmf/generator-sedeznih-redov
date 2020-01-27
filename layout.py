@@ -64,7 +64,7 @@ class Layout:
         self.students[i][j] = student
         self.seats_by_priority[priority].remove((i, j))
 
-    def tex(self, show_ids):
+    def tex(self, public):
         def show(i, j, s):
             if s is None:
                 if self.layout[i][j] == 'K':
@@ -72,10 +72,10 @@ class Layout:
                 if not self.layout[i][j].isdecimal():
                     return '(ni sedeža)'
                 return '(prosto)'
-            if show_ids:
-                return r" %s \newline %s \newline %s" % (s.ime, s.priimek, s.vpisna_stevilka)
+            if public:
+                return r"%s" % s.vpisna_stevilka
             else:
-                return r" %s \newline %s" % (s.ime, s.priimek)
+                return r" %s \newline %s \newline %s" % (s.ime, s.priimek, s.vpisna_stevilka)
 
         strut = r'\rule[-2cm]{0pt}{3cm} & '
 
@@ -85,6 +85,10 @@ class Layout:
             contents.append(strut + ' & '.join(show(row, i, s) for i, s in enumerate(self.students[row])) + r'\\ \cline{2-%d}' % (self.cols+1))
         contents.append(r'\end{tabularx}')
         return '\n'.join(contents)
+
+    def student_list(self):
+        return [self.students[i][j]
+                for i in range(self.rows) for j in range(self.cols) if self.students[i][j]]
 
 
 def layout_type(layout):
@@ -117,7 +121,7 @@ def fill_layouts(layouts, students, seed=None):
         print("Priority %d: %d / %d seats filled" % (p, student_per_priority[p], seats_per_priority[p]))
 
 
-def output_layouts(layouts, output_file, show_ids):
+def output_layouts(layouts, output_file, public):
     header = r"""
 \documentclass[a4paper,oneside,12pt]{article}
 
@@ -131,6 +135,7 @@ def output_layouts(layouts, output_file, show_ids):
   left=1.2cm,
   right=1.4cm
 ]{geometry}
+\usepackage{multicol}
 
 \pagestyle{empty}
 
@@ -140,6 +145,18 @@ def output_layouts(layouts, output_file, show_ids):
     footer = """
 \end{document}
 """
-    contents = [layout.tex(show_ids) for layout in layouts]
+    contents = [layout.tex(public) for layout in layouts]
+    if public:
+        # print number: slot mapping
+        slots = {student.vpisna_stevilka: layout.name
+                 for layout in layouts for student in layout.student_list()}
+
+        tex_list = [r'\section*{Razporeditev po učilnicah}\begin{multicols}{2}\begin{tabbing}',
+                    r'\hspace{2cm} \= \hspace{3cm} \kill']
+        for v, s in sorted(slots.items()):
+            tex_list.append(r'  %s \> %s \\' % (v, s))
+        tex_list.append(r'\end{tabbing}\end{multicols}\newpage')
+
+        contents = ['\n'.join(tex_list)] + contents
 
     output_file.write(header + '\n \\newpage \n'.join(contents) + footer)

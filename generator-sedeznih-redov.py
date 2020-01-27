@@ -21,14 +21,15 @@ parser.add_argument('-s', '--seed', dest='seed', type=int, required=False, nargs
 parser.add_argument('-o', '--output', dest='output', type=argparse.FileType('w', encoding='utf8'),
                     required=True, nargs=1, help='Pot do izhodne datoteke.')
 
-parser.add_argument('--vpisne', help='Če želite vključiti vpisne številke.', action='store_true')
+parser.add_argument('--objava', help='Pripravi izpis za objavo: izpiše samo vpisne številke in doda '
+                                     'seznam vseh vpisnih številk po terminih.', action='store_true')
 
 args = parser.parse_args()
 students = args.students[0]
 layouts = args.layouts
 slots = args.slots
 if slots:
-    assert len(slots) == len(layouts), "Names must be given for all slots."
+    assert len(slots) == len(layouts), "Each slot must have exactly one name"
     for l, s in zip(layouts, slots):
         l.name = s
 
@@ -38,5 +39,5 @@ assert capacity >= num_students, \
         "V učilnicah je le %d sedežev, kar ni dovolj za %d študentov." % (capacity, num_students)
 
 fill_layouts(layouts, students, args.seed[0] if args.seed is not None else None)
-output_layouts(layouts, args.output[0], args.vpisne)
+output_layouts(layouts, args.output[0], args.objava)
 print("Output saved to '%s'." % args.output[0].name)
