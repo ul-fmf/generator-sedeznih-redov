@@ -22,7 +22,7 @@ K K X X
 
 ## Tehnične zahteve
 
-Za uporabo potrebujete Python 3.7 ali novejši. Program izpiše `.tex` datoteko,
+Za uporabo potrebujete Python 3.8 ali novejši. Program izpiše `.tex` datoteko,
 tako da je za uporaben sedežni red potrebno imeti tudi osnoven prevajalnik `LaTeX`-a.
 
 ## Uporaba
