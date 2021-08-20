@@ -69,15 +69,19 @@ class Layout:
             if s is None:
                 if self.layout[i][j] == 'K':
                     return '(kateder)'
+                if self.layout[i][j] == 'H':
+                    return '(prehod)'
+                if self.layout[i][j] == 'Z':
+                    return '(prazno)'  # Nedovoljeni sedeži zaradi korone
                 if not self.layout[i][j].isdecimal():
-                    return '(ni sedeža)'
+                    return '(prazno)'
                 return '(prosto)'
             if public:
                 return r"%s" % s.vpisna_stevilka
             else:
                 return r" %s \newline %s \newline %s" % (s.ime, s.priimek, s.vpisna_stevilka)
 
-        strut = r'\rule[-2cm]{0pt}{3cm} & '
+        strut = r'\rule[-1.5cm]{0pt}{2.4cm} & '
 
         contents = [r'\section*{%s} \vspace{1cm}' % self.name,
                     r'\begin{tabularx}{\columnwidth}{c|%s} \cline{2-%d}' % ('X|' * self.cols, self.cols + 1)]
