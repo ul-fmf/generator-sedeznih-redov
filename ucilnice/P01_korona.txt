@@ -1,0 +1,6 @@
+H H H H H K 1 K 2
+Z 1 Z 1 H H H H H
+1 Z 1 Z H Z 1 Z 1
+1 Z 1 Z H Z 1 Z 1
+1 Z 1 Z H Z 1 Z 1
+1 Z 1 Z H Z 1 Z 1
